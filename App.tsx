@@ -12,8 +12,8 @@ export default function App() {
     const loadfont = async () => {
       await useFonts()
     }
-    loadfont();
-    setisFontLoaded(true);
+    loadfont().then(() => setisFontLoaded(true));
+
 
   }, []);
 
